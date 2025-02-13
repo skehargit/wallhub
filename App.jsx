@@ -9,6 +9,7 @@ import CollectionScreen from './src/screen/CollectionScreen';
 import SearchScreen from './src/screen/SearchScreen';
 import LikeScreen from './src/screen/LikeScreen';
 import LinearGradient from 'react-native-linear-gradient';
+import HomeStack from './src/navigation/MyStackNavigation';
 
 const Tab = createBottomTabNavigator();
 
@@ -43,8 +44,8 @@ const App = () => {
           tabBarInactiveTintColor: '#CCCCCC',
         }}>
         <Tab.Screen
-          name="home_screen"
-          component={HomeScreen}
+          name="home_stack"
+          component={HomeStack}
           options={{
             tabBarIcon: ({color, focused}) => (
               <View
