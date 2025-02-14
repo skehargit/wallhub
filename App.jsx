@@ -9,7 +9,7 @@ import CollectionScreen from './src/screen/CollectionScreen';
 import SearchScreen from './src/screen/SearchScreen';
 import LikeScreen from './src/screen/LikeScreen';
 import LinearGradient from 'react-native-linear-gradient';
-import HomeStack from './src/navigation/MyStackNavigation';
+import {CollectionStack, HomeStack, LikeStack, SearchStack} from './src/navigation/MyStackNavigation';
 
 const Tab = createBottomTabNavigator();
 
@@ -68,8 +68,8 @@ const App = () => {
           }}
         />
         <Tab.Screen
-          name="collection_screen"
-          component={CollectionScreen}
+          name="collection_stack"
+          component={CollectionStack}
           options={{
             tabBarIcon: ({color, focused}) => (
               <View
@@ -88,8 +88,8 @@ const App = () => {
           }}
         />
         <Tab.Screen
-          name="search_screen"
-          component={SearchScreen}
+          name="search_stack"
+          component={SearchStack}
           options={{
             tabBarIcon: ({color, focused}) => (
               <View
@@ -108,8 +108,8 @@ const App = () => {
           }}
         />
         <Tab.Screen
-          name="like_screen"
-          component={LikeScreen}
+          name="like_stack"
+          component={LikeStack}
           options={{
             tabBarIcon: ({color, focused}) => (
               <View
